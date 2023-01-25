@@ -37,3 +37,33 @@
         <p style="color:black"> Ini black color </p>
     </div>
 </div>
+
+<table border="1">
+    <thead>
+      <th>S/No</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>First Rec</th>
+      <th>Last Rec</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of Employee; let i = index; first as isFirst; last as isLast; trackBy:TrackByEmployeeName; even as isEven; odd as isOdd"
+      [ngClass]="isEven? 'color1': 'color2'">
+      <!-- [ngStyle]="{'color': isEven? 'green': 'orange'}"> -->
+
+      <td>{{i + 1}}</td>
+      <td>{{employee.Name}}</td>
+      <td>{{employee.Age}}</td>
+      <td>{{employee.Gender}}</td>
+      <td>{{isFirst}}</td>
+      <td>{{isLast}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <button (click)="GetMoreEmployee()">Add more employees</button>
+
+  <p [ngClass]="'color1'"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis obcaecati reprehenderit esse incidunt suscipit porro autem sed. Consequuntur reiciendis dolor exercitationem repudiandae aut nam, quas minima laboriosam tempora natus unde?</p>
