@@ -1,0 +1,39 @@
+<p>employee works!</p>
+
+<h1 *ngIf="visible">{{title}}</h1>
+
+<input type="radio" name="topgun" (click)="OnChange(true)">true
+<input type="radio" name="topgun" (click)="OnChange(true)">false
+
+
+<div *ngIf="IsVisible; then thenBlock; else elseBlock"> Test </div>
+
+<ng-template #thenBlock>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo nobis laudantium ullam, vel officiis? Architecto, repellendus corporis sed illo dolore libero quos, provident debitis rerum, minima laudantium a aperiam.</p>
+</ng-template>
+
+<ng-template #elseBlock>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo nobis laudantium ullam, vel officiis? Architecto, repellendus corporis sed illo dolore libero quos, provident debitis rerum, minima laudantium a aperiam.</p>
+</ng-template>
+
+<select>
+    <option value="">---Select color---</option>
+    <option value="R">Red</option>
+    <option value="G">Green</option>
+    <option value="B">Blue</option>
+</select>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'R'">
+        <p style="color:red"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+    </div>
+    <div *ngSwitchCase="'G'">
+        <p style="color:green"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+    </div>
+    <div *ngSwitchCase="'B'">
+        <p style="color:blue"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+    </div>
+    <div *ngSwitchCaseDefault>
+        <p style="color:black"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+    </div>
+</div>
