@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class EmployeeComponent {
 
-  title = "Employee page";
+  title = "Favourite Colors";
 
   number1 = 12;
   number2 = 20;
@@ -22,11 +22,14 @@ export class EmployeeComponent {
     }
   }
 
-  IsVisible = true
+  IsVisible = true;
+  color : any;
 
   OnChange (arg : any) {
     this.IsVisible = arg;
   }
 
-  color : any;
+  SetColor(event: any) {
+    this.color = event.target.value;
+  }
 }

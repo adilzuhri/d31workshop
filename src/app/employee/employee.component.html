@@ -1,4 +1,4 @@
-<p>employee works!</p>
+<p>Employee Page</p>
 
 <h1 *ngIf="visible">{{title}}</h1>
 
@@ -9,14 +9,14 @@
 <div *ngIf="IsVisible; then thenBlock; else elseBlock"> Test </div>
 
 <ng-template #thenBlock>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo nobis laudantium ullam, vel officiis? Architecto, repellendus corporis sed illo dolore libero quos, provident debitis rerum, minima laudantium a aperiam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 </ng-template>
 
 <ng-template #elseBlock>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo nobis laudantium ullam, vel officiis? Architecto, repellendus corporis sed illo dolore libero quos, provident debitis rerum, minima laudantium a aperiam.</p>
+    <p>Autem illo nobis laudantium ullam, vel officiis? Architecto, repellendus corporis sed illo dolore libero quos, provident debitis rerum, minima laudantium a aperiam.</p>
 </ng-template>
 
-<select>
+<select (change)="SetColor($event)">
     <option value="">---Select color---</option>
     <option value="R">Red</option>
     <option value="G">Green</option>
@@ -25,15 +25,15 @@
 
 <div [ngSwitch]="color">
     <div *ngSwitchCase="'R'">
-        <p style="color:red"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+        <p style="color:red"> Ini red color </p>
     </div>
     <div *ngSwitchCase="'G'">
-        <p style="color:green"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+        <p style="color:green"> Ini green color </p>
     </div>
     <div *ngSwitchCase="'B'">
-        <p style="color:blue"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+        <p style="color:blue"> Ini blue color </p>
     </div>
     <div *ngSwitchCaseDefault>
-        <p style="color:black"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequatur, repudiandae ipsa eaque consequuntur, a doloribus aliquid possimus, distinctio voluptatum asperiores explicabo quas reprehenderit sint enim illum rem animi fuga?</p>
+        <p style="color:black"> Ini black color </p>
     </div>
 </div>
