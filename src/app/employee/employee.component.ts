@@ -99,4 +99,13 @@ export class EmployeeComponent {
   TrackByEmployeeName (index: number, employee: any) : string { 
     return employee.Name;
   }
+
+  GetCSS(isEven: any){
+    if (isEven){
+      return "color1"
+    } else {
+      return "color2"
+    }
+  }
+
 }
